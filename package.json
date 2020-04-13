@@ -1,16 +1,27 @@
 {
-  "name": "replace-env-variable",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@utftufutukgyftryidytftuv/rft",
+  "version": "0.0.0",
+  "description": "recursive file template",
   "main": "index.js",
   "dependencies": {
     "dotenv": "^8.2.0",
     "minimist": "^1.2.5"
   },
+  "bin": {
+    "rft": "./cli.js"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Aleksey Malyuta <overby999@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utftufutukgyftryidytftuv/rft.git"
+  },
+  "bugs": {
+    "url": "https://github.com/utftufutukgyftryidytftuv/rft/issues"
+  },
+  "homepage": "https://github.com/utftufutukgyftryidytftuv/rft#readme"
 }
