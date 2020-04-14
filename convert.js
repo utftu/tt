@@ -26,8 +26,8 @@ async function convertValue(raw, env) {
   // $FOO (?<!\\)\$(\w+)
   // ${FOO} (?<!\\)\${(\w+)}
   // {{FOO}} (?<!\\){{(\w+)}}
-  return raw.replace(/(?<!\\)\$(\w+)|(?<!\\)\${(\w+)}|(?<!\\){{(\w+)}}/gi, (match, p1, p2) => {
-    const key = p1 || p2
+  return raw.replace(/(?<!\\)\$(\w+)|(?<!\\)\${(\w+)}|(?<!\\){{(\w+)}}/gi, (match, p1, p2, p3) => {
+    const key = p1 || p2 || p3
     return env[key] || match
   })
 }
