@@ -25,7 +25,8 @@ async function convertFile(source, initSource, targetDir, env) {
 async function convertValue(raw, env) {
   // $FOO (?<!\\)\$(\w+)
   // ${FOO} (?<!\\)\${(\w+)}
-  return raw.replace(/(?<!\\)\$(\w+)|(?<!\\)\${(\w+)}/gi, (match, p1, p2) => {
+  // {{FOO}} (?<!\\){{(\w+)}}
+  return raw.replace(/(?<!\\)\$(\w+)|(?<!\\)\${(\w+)}|(?<!\\){{(\w+)}}/gi, (match, p1, p2) => {
     const key = p1 || p2
     return env[key] || match
   })
