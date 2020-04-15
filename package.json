@@ -18,8 +18,18 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly" : "npm test",
+    "build": "webpack",
+    "version" : "git add -A src",
+    "postversion" : "git push && git push --tags"
+
   },
+  "files": [
+    "build",
+    "package.json"
+  ],
   "author": "Aleksey Malyuta <overby999@gmail.com>",
   "license": "ISC",
   "repository": {
