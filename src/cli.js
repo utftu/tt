@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const path = require('path')
 const dotenv = require('dotenv')
 const convert = require('./convert')
