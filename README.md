@@ -2,9 +2,9 @@
 
 ## About ##
 
-RFT replace variables like `$FOO` `${FOO}` and `{{FOO}}`
+**RFT** replace variables like `$FOO` `${FOO}` and `{{FOO}}`
 
-RFT has a format ```rft source target```
+**RFT** has a format ```rft source target```
 
 - If source is file **RFT** place new in file in target path  
 - If source ia dir **RFT** replace variables recursive in files and subdirs and place them in target dir relatively by
@@ -13,7 +13,7 @@ RFT has a format ```rft source target```
 ## Options ##
 
 - `-e FOO=bar` and `--env FOO=bar` add variable
-- `--env-file /.env` add variables form `/.env` file
+- `--env-file /.env` add variables form file
 - `--source /source` set **source** instead 1-st argument 
 - `--target /target` set **source** instead 2-nd argument 
  
@@ -31,7 +31,7 @@ Lorem $FOO ipsum ${FOO} dolor sit {{FOO}} amet
 ```
 
 #### command ####
-```npx @utftufutukgyftryidytftuv/rft -e FOO=bar /.env /source/file /target/new/path/file```
+```npx @utftufutukgyftryidytftuv/rft -e FOO=bar /source/file /target/new/path/file```
 
 #### result paths ####
 ```/source/file```  
@@ -60,7 +60,7 @@ Lorem $FOO ipsum ${FOO} dolor sit {{FOO}} amet
 ```
 
 #### command ####
-```npx @utftufutukgyftryidytftuv/rft -e FOO=bar /.env /source /target```
+```npx @utftufutukgyftryidytftuv/rft -e FOO=bar /source /target```
 
 #### result paths ####
 ```/source/file```  
