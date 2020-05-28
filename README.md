@@ -7,7 +7,7 @@
 **RFT** has a format ```rft source target```
 
 - If source is file **RFT** place new in file in target path  
-- If source ia dir **RFT** replace variables recursive in files and subdirs and place them in target dir relatively by
+- If source is dir **RFT** replace variables recursive in files and subdirs and place them in target dir relatively by
  their path from source dir
  
 ## Options ##
