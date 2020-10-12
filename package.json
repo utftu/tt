@@ -1,7 +1,7 @@
 {
   "name": "@utft/tt",
-  "version": "0.0.0",
-  "description": "text template",
+  "version": "0.0.1",
+  "description": "util to insert variables in text",
   "main": "./build/index.js",
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -38,5 +38,6 @@
   "bugs": {
     "url": "https://github.com/utftufutukgyftryidytftuv/tt/issues"
   },
-  "homepage": "https://github.com/utftufutukgyftryidytftuv/tt#readme"
+  "homepage": "https://github.com/utftufutukgyftryidytftuv/tt#readme",
+  "keywords": ["template", "text", "variables", "recursive"]
 }
