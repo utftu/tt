@@ -2,6 +2,10 @@
 
 ## About ##
 
+```shell script
+    npm install @utft/tt
+```
+
 **tt** replace variables like `$FOO` `${FOO}` and `{{FOO}}`
 
 **tt** can be used pro by **cli** and **programmatically**
