@@ -1,7 +1,9 @@
-const path = require('path')
-const dotenv = require('dotenv')
-const convert = require('./convert')
-const args = require('minimist')(process.argv.slice(2))
+import path from 'path'
+import dotenv from 'dotenv'
+import minimist from 'minimist'
+import convert from './convert-files.mjs'
+
+const args = minimist(process.argv.slice(2))
 
 let vars = {}
 

@@ -4,6 +4,7 @@
   "description": "recursive file template",
   "main": "index.js",
   "dependencies": {
+    "@utft/helpers": "0.0.1",
     "dotenv": "^8.2.0",
     "minimist": "^1.2.5"
   },
@@ -12,13 +13,13 @@
   },
   "devDependencies": {
     "chmod-webpack-plugin": "^0.1.3",
-    "fs-extra": "^9.0.0",
-    "jest": "^25.3.0",
-    "webpack": "^5.0.0-beta.13",
-    "webpack-cli": "^3.3.11"
+    "fs-extra": "^9.0.1",
+    "jest": "^26.5.3",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
   },
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
     "build": "webpack",

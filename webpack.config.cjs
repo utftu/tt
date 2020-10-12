@@ -1,14 +1,15 @@
 const path = require('path')
 const webpack = require('webpack')
-const ChmodWebpackPlugin = require("chmod-webpack-plugin");
+const ChmodWebpackPlugin = require('chmod-webpack-plugin')
 
 module.exports = {
   entry: {
-    cli:  './src/cli.js',
-    index: './src/index.js'
+    cli:  './src/cli.mjs',
+    index: './src/index.mjs'
   },
   output: {
     path: path.resolve(__dirname, 'build'),
+    libraryTarget: 'commonjs2',
     filename: '[name].js'
   },
   mode: 'production',

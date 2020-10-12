@@ -1,14 +1,15 @@
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
+import convertValue from './convert.mjs'
 
-async function convert(input, initSource, target, env) {
+async function convertFiles(input, initSource, target, env) {
   const stat = await fs.promises.stat(input)
   if (stat.isFile()) {
     return await convertFile(input, initSource, target, env)
   }
 
   const subPaths = await fs.promises.readdir(input)
-  return await Promise.all(subPaths.map((subPath) => convert(path.join(input, subPath), initSource, target, env)))
+  return await Promise.all(subPaths.map((subPath) => convertFiles(path.join(input, subPath), initSource, target, env)))
 }
 
 async function convertFile(source, initSource, targetDir, env) {
@@ -22,16 +23,6 @@ async function convertFile(source, initSource, targetDir, env) {
   return await fs.promises.writeFile(outputPath, value)
 }
 
-async function convertValue(raw, env) {
-  // $FOO (?<!\\)\$(\w+)
-  // ${FOO} (?<!\\)\${(\w+)}
-  // {{FOO}} (?<!\\){{(\w+)}}
-  return raw.replace(/(?<!\\)\$(\w+)|(?<!\\)\${(\w+)}|(?<!\\){{(\w+)}}/gi, (match, p1, p2, p3) => {
-    const key = p1 || p2 || p3
-    return env[key] || match
-  })
-}
-
 async function main(input, output, env) {
   const stat = await fs.promises.stat(input)
   if (stat.isFile()) {
@@ -42,7 +33,7 @@ async function main(input, output, env) {
     return await fs.promises.writeFile(output, value)
   }
 
-  return await convert(input, input, output, env)
+  return await convertFiles(input, input, output, env)
 }
 
-module.exports = main
+export default main
