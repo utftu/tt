@@ -1,13 +1,13 @@
-# RFT - recursive file template #
+# tt - recursive file template #
 
 ## About ##
 
-**RFT** replace variables like `$FOO` `${FOO}` and `{{FOO}}`
+**tt** replace variables like `$FOO` `${FOO}` and `{{FOO}}`
 
-**RFT** has a format ```rft source target```
+**tt** has a format ```tt source target```
 
-- If source is file **RFT** place new in file in target path  
-- If source is dir **RFT** replace variables recursive in files and subdirs and place them in target dir relatively by
+- If source is file **tt** place new in file in target path  
+- If source is dir **tt** replace variables recursive in files and subdirs and place them in target dir relatively by
  their path from source dir
  
 ## Options ##
@@ -31,7 +31,7 @@ Lorem $FOO ipsum ${FOO} dolor sit {{FOO}} amet
 ```
 
 #### command ####
-```npx @utftufutukgyftryidytftuv/rft -e FOO=bar /source/file /target/new/path/file```
+```npx @utft/tt -e FOO=bar /source/file /target/new/path/file```
 
 #### result paths ####
 ```/source/file```  
@@ -60,7 +60,7 @@ Lorem $FOO ipsum ${FOO} dolor sit {{FOO}} amet
 ```
 
 #### command ####
-```npx @utftufutukgyftryidytftuv/rft -e FOO=bar /source /target```
+```npx @utft/tt -e FOO=bar /source /target```
 
 #### result paths ####
 ```/source/file```  

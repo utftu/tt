@@ -1,10 +1,9 @@
 {
-  "name": "@utftufutukgyftryidytftuv/rft",
-  "version": "0.0.7",
+  "name": "@utftufutukgyftryidytftuv/tt",
+  "version": "0.0.0",
   "description": "recursive file template",
-  "main": "index.js",
+  "main": "./build/index.js",
   "dependencies": {
-    "@utft/helpers": "0.0.1",
     "dotenv": "^8.2.0",
     "minimist": "^1.2.5"
   },
@@ -34,10 +33,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/utftufutukgyftryidytftuv/rft.git"
+    "url": "git+https://github.com/utftufutukgyftryidytftuv/tt.git"
   },
   "bugs": {
-    "url": "https://github.com/utftufutukgyftryidytftuv/rft/issues"
+    "url": "https://github.com/utftufutukgyftryidytftuv/tt/issues"
   },
-  "homepage": "https://github.com/utftufutukgyftryidytftuv/rft#readme"
+  "homepage": "https://github.com/utftufutukgyftryidytftuv/tt#readme"
 }
