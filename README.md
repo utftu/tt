@@ -1,4 +1,4 @@
-# tt - recursive file template #
+# tt - text template #
 
 ## About ##
 
