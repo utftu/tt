@@ -5,3 +5,8 @@ export {
     prepare,
     convertFiles
 }
+
+export default {
+    prepare,
+    convertFiles
+}
