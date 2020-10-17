@@ -1,6 +1,6 @@
 import config from './config.mjs'
 
-export default function (str, regexp = config.regexp) {
+function prepare (str, regexp = config.regexps.complex) {
     const matchAll = Array.from(str.matchAll(regexp))
     let lastStrIndex = 0
     const arrStr = []
@@ -16,7 +16,7 @@ export default function (str, regexp = config.regexp) {
                 break
             }
         }
-
+        
         arrEnv.push({i, env: group})
         lastStrIndex = match.index + match[0].length
     })
@@ -34,3 +34,7 @@ export default function (str, regexp = config.regexp) {
         return result
     }
 }
+
+prepare.regexps = config.regexps
+
+export default prepare
