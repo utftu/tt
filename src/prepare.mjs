@@ -35,6 +35,4 @@ function prepare (str, regexp = config.regexps.complex) {
     }
 }
 
-prepare.regexps = config.regexps
-
 export default prepare
