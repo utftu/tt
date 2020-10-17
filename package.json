@@ -1,6 +1,6 @@
 {
   "name": "@utft/tt",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "util to insert variables in text",
   "main": "./build/index.js",
   "dependencies": {
